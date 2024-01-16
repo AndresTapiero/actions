@@ -1,6 +1,6 @@
 public class HelloW {
     
-    public void andrew() {
+    public void main(String[] args) {
         System.out.println("Hola desde script");
     }
 }
