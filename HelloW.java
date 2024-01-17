@@ -1,6 +1,9 @@
+import os;
+
 public class HelloW {
     
     public static void main(String[] args) {
-        System.out.println("Hola desde script");
+        String name = os.getenv("USERNAME");
+        System.out.println("Hola desde script " + name);
     }
 }
