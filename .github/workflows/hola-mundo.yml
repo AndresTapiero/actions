@@ -1,0 +1,24 @@
+name: Aprendiendo GitHub Actions
+run-name: Estoy aprendiendo GitHubActions
+on: [push]
+jobs:
+  setup-java:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup JDK
+        uses: actions/setup-java@v3.12.0
+        with:
+          distribution: oracle
+          java-version: 17
+          java-package: jdk
+      - name: Definir variable
+        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
+  run-java:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Compile and run
+        run: |
+          javac HelloW.java
+          java HelloW
