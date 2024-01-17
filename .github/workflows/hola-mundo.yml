@@ -12,7 +12,7 @@ jobs:
           java-version: 17
           java-package: jdk
       - name: Definir variable
-        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_E
+        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_ENV
   run-java:
     runs-on: ubuntu-latest
     steps:
