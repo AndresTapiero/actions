@@ -11,13 +11,13 @@ jobs:
           distribution: oracle
           java-version: 17
           java-package: jdk
+      - name: Definir variable
+        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_E
   run-java:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      - name: Definir variable
-        run: echo "USERNAME=${{ github.actor }}" >> $GITHUB_E
       - name: Compile and run
         run: |
           javac HelloW.java
