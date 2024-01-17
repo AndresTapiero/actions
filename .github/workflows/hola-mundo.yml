@@ -7,10 +7,10 @@ jobs:
     steps:
       - name: Setup JDK
         uses: actions/setup-java@v3.12.0
-          with:
-            distribution: oracle
-            java-version: 17
-            java-package: jdk
+        with:
+          distribution: oracle
+          java-version: 17
+          java-package: jdk
   run-java:
     runs-on: ubuntu-latest
     steps:
